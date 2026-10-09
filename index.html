@@ -19,6 +19,12 @@
   .board { background: var(--board); border: 3px solid var(--paint); padding: 24px; }
   .board h2 { font: 500 14px/1 Oswald, sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); margin: 0 0 16px; }
   .board p { margin: 0; }
+  .board + .board { margin-top: 24px; }
+  .board h3 { font: 500 16px/1.2 Oswald, sans-serif; letter-spacing: .08em; text-transform: uppercase; margin: 24px 0 8px; }
+  .board ul { margin: 8px 0 0; padding-left: 20px; }
+  .board li + li { margin-top: 6px; }
+  .board p + p { margin-top: 12px; }
+  .small { font-size: 15px; opacity: .8; }
   a { color: var(--amber); text-underline-offset: 3px; }
   footer { padding: 24px; text-align: center; font-size: 14px; opacity: .8; }
 </style>
@@ -27,6 +33,44 @@
 <main>
   <h1>PACER</h1>
   <p class="tag">Run to your music.</p>
+  <section class="board" id="privacy">
+    <h2>Privacy policy</h2>
+    <p class="small">Effective 9 October 2026</p>
+    <p>Pacer has no accounts, no ads, no analytics and no tracking. Almost everything it does happens on your iPhone.</p>
+
+    <h3>What Pacer reads</h3>
+    <ul>
+      <li><strong>Your Apple Music library</strong>, with your permission: song titles, artists, genres, IDs and what you played recently, to find each song's tempo and build your playlists.</li>
+      <li><strong>Your location</strong>, with your permission, only while a race or practice is running, to measure how far you've run so the music changes in the right place.</li>
+      <li><strong>Battery level and headphones</strong>, for the Ready to race check.</li>
+    </ul>
+
+    <h3>What stays on your phone</h3>
+    <p>Your races, goal times, plans, playlists, practice runs, settings and the tempos Pacer has found. Your location never leaves the phone and Pacer keeps no route: only the latest position is held with a running race so it can pick up again after a relaunch. Reminders are local notifications scheduled on the phone. When Pacer listens to a song's 30 second Apple Music preview to hear its tempo, the preview is deleted right after.</p>
+
+    <h3>What is shared</h3>
+    <ul>
+      <li><strong>Pacer's shared tempo database</strong> (Apple CloudKit). When Pacer finds a song's tempo, it saves the song's recording code (ISRC), the tempo, where the tempo came from and, for tempos heard on the phone, how sure it was. Every runner reads these so nobody looks up the same song twice. Nothing about you is in these records: no name, no library, no location. CloudKit uses your iCloud account to save them, under an anonymous ID that Pacer cannot connect to you.</li>
+      <li><strong>Deezer</strong> receives a song's ISRC, and <strong>GetSongBPM</strong> a song's title and artist, to look up tempos the shared database doesn't know. Like any web request, these services see your IP address. Their own privacy policies apply: <a href="https://www.deezer.com/legal/personal-datas">Deezer</a>, <a href="https://getsongbpm.com/legal/privacy">GetSongBPM</a>.</li>
+      <li><strong>Apple</strong> provides Apple Music, playback, the song previews, iCloud and Live Activities, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+    </ul>
+    <p>Pacer never sells or rents data and never shares it for advertising.</p>
+
+    <h3>Your choices</h3>
+    <p>You can turn off Apple Music, location and notification access at any time in the iPhone Settings app. Deleting Pacer deletes everything it kept on your phone. Tempo records in the shared database hold no personal data, but if you want any removed, get in touch below.</p>
+
+    <h3>Children</h3>
+    <p>Pacer is not directed at children and collects no personal information from anyone.</p>
+
+    <h3>Changes</h3>
+    <p>If this policy changes, the new version will be posted here with a new date.</p>
+  </section>
+
+  <section class="board" id="support">
+    <h2>Support and contact</h2>
+    <p>Questions, problems or privacy requests: <a href="https://github.com/ahmed-gelemli/pacer-site/issues">open an issue on GitHub</a>.</p>
+  </section>
+
   <section class="board">
     <h2>Credits</h2>
     <p>Tempo data from <a href="https://getsongbpm.com">GetSongBPM</a> and <a href="https://www.deezer.com">Deezer</a>. Music by Apple Music.</p>
